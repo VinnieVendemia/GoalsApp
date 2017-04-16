@@ -51,6 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="SFa-aH-J6P" id="qvy-A2-hdc"/>
+                        <outlet property="signUpButton" destination="aHv-8H-mhx" id="iM5-Ud-RnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
