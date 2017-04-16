@@ -161,9 +161,11 @@
 				TargetAttributes = {
 					B0E7B1841E8C98D100E366E0 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0830;
 					};
 					B0E7B1991E8C98D200E366E0 = {
 						CreatedOnToolsVersion = 6.0.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = B0E7B1841E8C98D100E366E0;
 					};
 				};
@@ -341,6 +343,7 @@
 				INFOPLIST_FILE = GoalsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -351,6 +354,7 @@
 				INFOPLIST_FILE = GoalsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -369,6 +373,7 @@
 				INFOPLIST_FILE = GoalsAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoalsApp.app/GoalsApp";
 			};
 			name = Debug;
@@ -384,6 +389,7 @@
 				INFOPLIST_FILE = GoalsAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoalsApp.app/GoalsApp";
 			};
 			name = Release;
@@ -407,6 +413,7 @@
 				B0E7B1A61E8C98D200E366E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E7B1A71E8C98D200E366E0 /* Build configuration list for PBXNativeTarget "GoalsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +422,7 @@
 				B0E7B1A91E8C98D200E366E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
