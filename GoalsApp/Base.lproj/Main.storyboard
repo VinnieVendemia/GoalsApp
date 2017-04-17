@@ -38,6 +38,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceW-xl-WKp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-8H-mhx">
                                 <rect key="frame" x="76" y="555" width="222" height="47"/>
@@ -54,11 +57,39 @@
                     <connections>
                         <outlet property="loginButton" destination="SFa-aH-J6P" id="qvy-A2-hdc"/>
                         <outlet property="signUpButton" destination="aHv-8H-mhx" id="iM5-Ud-RnN"/>
+                        <segue destination="zd3-Q3-zbz" kind="presentation" identifier="GoToLoginController" id="Fiy-aO-7Aa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="36.431784107946029"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="oGk-6b-all">
+            <objects>
+                <viewController id="zd3-Q3-zbz" customClass="LoginViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lW7-4T-4l2"/>
+                        <viewControllerLayoutGuide type="bottom" id="QSB-qo-S7p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWT-XD-ga0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-fM-vVg">
+                                <rect key="frame" x="154" y="122" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5f-3B-ca9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-331"/>
         </scene>
     </scenes>
 </document>
