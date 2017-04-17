@@ -19,5 +19,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    //MARK: Action 
+    
+    @IBAction func loginAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "GoToLoginController", sender:self)
+    }
+    
 }
 
