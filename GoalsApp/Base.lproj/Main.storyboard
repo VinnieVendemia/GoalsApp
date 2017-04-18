@@ -50,6 +50,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMc-ys-5qC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,11 +61,39 @@
                         <outlet property="loginButton" destination="SFa-aH-J6P" id="qvy-A2-hdc"/>
                         <outlet property="signUpButton" destination="aHv-8H-mhx" id="iM5-Ud-RnN"/>
                         <segue destination="zd3-Q3-zbz" kind="presentation" identifier="GoToLoginController" id="Fiy-aO-7Aa"/>
+                        <segue destination="A74-nR-Lfk" kind="presentation" identifier="GoToSignUpController" id="lNK-fq-Mga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="36.431784107946029"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="KpI-S5-irL">
+            <objects>
+                <viewController id="A74-nR-Lfk" customClass="SignUpViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1i-W6-5dT"/>
+                        <viewControllerLayoutGuide type="bottom" id="6DT-Oe-9A6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XHR-mS-gsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOA-8U-YHU">
+                                <rect key="frame" x="166" y="71" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v42-iu-RJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="385"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="oGk-6b-all">
