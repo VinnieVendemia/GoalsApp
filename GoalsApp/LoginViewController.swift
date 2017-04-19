@@ -17,7 +17,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        addBottomBorder(textField: emailTextField);
+        addBottomBorder(textField: passwordTextField);
+    }
+    
+    func addBottomBorder(textField: UITextField) {
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.white.cgColor
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width:  textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
     }
     
 }
