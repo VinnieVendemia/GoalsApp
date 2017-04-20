@@ -129,18 +129,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-fK-YZa">
+                                <rect key="frame" x="18" y="497" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98678820680000001" green="1" blue="0.97749310229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="8r1-z0-96y" id="C6X-32-ECG"/>
                         <outlet property="passwordTextField" destination="6YD-bB-hyX" id="uVp-qg-Jiz"/>
+                        <outlet property="passwordValidationText" destination="PdV-fK-YZa" id="VC6-pe-YAx"/>
                         <outlet property="passwordVerifyTextField" destination="mH3-SN-wVE" id="4IO-QS-Crr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v42-iu-RJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="385"/>
+            <point key="canvasLocation" x="821.60000000000002" y="384.55772113943033"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="oGk-6b-all">
