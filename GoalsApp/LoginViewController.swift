@@ -32,4 +32,9 @@ class LoginViewController: UIViewController {
         textField.layer.masksToBounds = true
     }
     
+    //MARK: Actions 
+    
+    @IBAction func goToHomeController(_ sender: Any) {
+        self.performSegue(withIdentifier: "GoToHomeController", sender:self)
+    }
 }
