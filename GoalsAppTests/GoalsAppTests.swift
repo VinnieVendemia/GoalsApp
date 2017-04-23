@@ -9,6 +9,8 @@
 import UIKit
 import XCTest
 
+@testable import GoalsApp
+
 class GoalsAppTests: XCTestCase {
     
     override func setUp() {
@@ -31,6 +33,13 @@ class GoalsAppTests: XCTestCase {
         self.measure() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    
+    // MARK: Goal object tests 
+    func testGoalInitializationSucceeds() {
+        let notNilGoal = Goal.init(title: "Goal 1", description: "Describing goal 1")
+        XCTAssertNotNil(notNilGoal)
     }
     
 }
