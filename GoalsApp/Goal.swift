@@ -16,12 +16,7 @@ class Goal {
     var description: String
     
     //MARK: Initialization
-    init?(title: String, description: String) {
-        
-        if title.isEmpty || description.isEmpty {
-            return nil
-        }
-        
+    init(title: String, description: String) {
         self.title = title
         self.description = description
     }
