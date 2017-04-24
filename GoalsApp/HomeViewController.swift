@@ -20,6 +20,30 @@ class HomeViewController: UITableViewController {
     }
     
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return goals.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "GoalTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? GoalTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of GoalTableViewCell.")
+        }
+        
+        let goal = goals[indexPath.row]
+        
+        cell.titleLable.text = goal.title
+        cell.descriptionLabel.text = goal.description
+        
+        // Configure the cell...
+        
+        return cell
+    }
+    
     
     //MARK: Private Methods
     private func loadSampleGoals() {
