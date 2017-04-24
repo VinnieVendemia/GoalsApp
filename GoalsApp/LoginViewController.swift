@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     
     //MARK: Actions 
     
-    @IBAction func goToHomeController(_ sender: Any) {
-        self.performSegue(withIdentifier: "GoToHomeController", sender:self)
+    @IBAction func goToGoalsController(_ sender: Any) {
+        self.performSegue(withIdentifier: "GoToGoalsController", sender:self)
     }
 }

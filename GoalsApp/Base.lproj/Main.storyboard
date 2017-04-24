@@ -205,7 +205,7 @@
                                     <color key="titleColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToHomeController:" destination="zd3-Q3-zbz" eventType="touchUpInside" id="S11-lg-KNa"/>
+                                    <action selector="goToGoalsController:" destination="zd3-Q3-zbz" eventType="touchUpInside" id="fog-Cx-p6U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,17 +214,17 @@
                     <connections>
                         <outlet property="emailTextField" destination="82s-W7-y7W" id="rg4-8L-jg9"/>
                         <outlet property="passwordTextField" destination="qGb-e8-vuC" id="mSD-RX-iAm"/>
-                        <segue destination="oA0-oQ-UY0" kind="presentation" identifier="GoToHomeController" id="I0o-Z7-Dqc"/>
+                        <segue destination="oA0-oQ-UY0" kind="presentation" identifier="GoToGoalsController" id="I0o-Z7-Dqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5f-3B-ca9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832.79999999999995" y="-331.48425787106447"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Goals View Controller-->
         <scene sceneID="Hfv-fS-YBi">
             <objects>
-                <tableViewController id="oA0-oQ-UY0" customClass="HomeViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oA0-oQ-UY0" customClass="GoalsViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="X5T-A7-cph">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

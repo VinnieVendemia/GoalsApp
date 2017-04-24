@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  GoalsViewController.swift
 //  GoalsApp
 //
 //  Created by Christopher Vincent Vendemia on 4/21/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class GoalsViewController: UITableViewController {
     
     //MARK: Properties
     var goals = [Goal]()
