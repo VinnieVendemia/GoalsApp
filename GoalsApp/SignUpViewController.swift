@@ -20,6 +20,10 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let utils = Utilities();
+        utils.addBottomBorder(textField: emailTextField);
+        utils.addBottomBorder(textField: passwordTextField);
+        utils.addBottomBorder(textField: passwordVerifyTextField);
         
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
