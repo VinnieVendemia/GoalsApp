@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E3057351EAC24B600978F36 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3057341EAC24B600978F36 /* Goal.swift */; };
+		2E3057371EAFB85100978F36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3057361EAFB85100978F36 /* Utilities.swift */; };
 		2E59D14C1EAAA038007F5F91 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59D14B1EAAA038007F5F91 /* GoalsViewController.swift */; };
 		2E59D14E1EABF1C3007F5F91 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59D14D1EABF1C3007F5F91 /* GoalTableViewCell.swift */; };
 		2EA54C0C1EA578C500C0E323 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2E3057341EAC24B600978F36 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		2E3057361EAFB85100978F36 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2E59D14B1EAAA038007F5F91 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		2E59D14D1EABF1C3007F5F91 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				B0E7B1881E8C98D200E366E0 /* Supporting Files */,
 				2E59D14B1EAAA038007F5F91 /* GoalsViewController.swift */,
 				2E3057341EAC24B600978F36 /* Goal.swift */,
+				2E3057361EAFB85100978F36 /* Utilities.swift */,
 			);
 			path = GoalsApp;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */,
 				2E59D14E1EABF1C3007F5F91 /* GoalTableViewCell.swift in Sources */,
 				B0E7B18B1E8C98D200E366E0 /* AppDelegate.swift in Sources */,
+				2E3057371EAFB85100978F36 /* Utilities.swift in Sources */,
 				2E3057351EAC24B600978F36 /* Goal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
