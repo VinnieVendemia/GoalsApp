@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="36.431784107946029"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Title-->
         <scene sceneID="KpI-S5-irL">
             <objects>
                 <viewController id="A74-nR-Lfk" customClass="SignUpViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,15 +130,27 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords do not match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-fK-YZa">
-                                <rect key="frame" x="18" y="497" width="188" height="21"/>
+                                <rect key="frame" x="18" y="515" width="188" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.98678820680000001" green="1" blue="0.97749310229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Say-jp-yPj">
+                                <rect key="frame" x="223" y="515" width="136" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98678820680000001" green="1" blue="0.97749310229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToGoalsController:" destination="zd3-Q3-zbz" eventType="touchUpInside" id="m91-TL-YrT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="kxN-N7-Acm"/>
                     <connections>
                         <outlet property="emailTextField" destination="8r1-z0-96y" id="C6X-32-ECG"/>
                         <outlet property="passwordTextField" destination="6YD-bB-hyX" id="uVp-qg-Jiz"/>
