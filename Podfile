@@ -7,6 +7,7 @@ target 'GoalsApp' do
 
   # Pods for GoalsApp
   pod 'Charts'
+  pod 'RealmSwift'
   
   target 'GoalsAppTests' do
     inherit! :search_paths
