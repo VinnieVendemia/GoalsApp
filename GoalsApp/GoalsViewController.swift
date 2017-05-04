@@ -37,7 +37,7 @@ class GoalsViewController: UITableViewController {
         let goal = goals[indexPath.row]
         
         cell.titleLable.text = goal.title
-        cell.descriptionLabel.text = goal.description
+        cell.descriptionLabel.text = goal.goalDescription
         
         // Configure the cell...
         
@@ -47,10 +47,6 @@ class GoalsViewController: UITableViewController {
     
     //MARK: Private Methods
     private func loadSampleGoals() {
-        let goal1 = Goal(title: "Test Goal", description: "Test Goal Description")
-        
-        let goal2 = Goal(title: "Test Goal 2", description: "Test Goal Description 2")
-        
-        goals += [goal1, goal2]
+        goals += []
     }
 }
