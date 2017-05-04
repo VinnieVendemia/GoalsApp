@@ -246,7 +246,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wEL-UW-aBE" id="GM2-0d-fQV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="189.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6e-Ma-7Gz">
@@ -263,7 +263,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Er-aO-0SW">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Er-aO-0SW" customClass="LineChartView" customModule="Charts">
                                             <rect key="frame" x="8" y="63" width="359" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,6 +272,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="aVZ-D9-EeM" id="58K-U6-bhQ"/>
+                                    <outlet property="goalLineChartView" destination="6Er-aO-0SW" id="DLF-AW-Kkx"/>
                                     <outlet property="titleLable" destination="L6e-Ma-7Gz" id="bfs-SF-8US"/>
                                 </connections>
                             </tableViewCell>
