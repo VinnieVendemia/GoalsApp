@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import Charts
 
 class GoalTableViewCell: UITableViewCell {
     
     //MARK: Properties
+    @IBOutlet var goalLineChartView: LineChartView!
     @IBOutlet var titleLable: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
 }
