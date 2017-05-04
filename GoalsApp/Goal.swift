@@ -6,18 +6,31 @@
 //  Copyright © 2017 Vinnie Vendemia. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 
-class Goal {
+
+class Goal: Object {
     
     //MARK: Properties 
     
-    var title: String
-    var description: String
+    dynamic var title: String = ""
+    dynamic var goalDescription: String = ""
     
-    //MARK: Initialization
-    init(title: String, description: String) {
-        self.title = title
-        self.description = description
+    func save() {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(self)
+            }
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
     }
+    
+//    //MARK: Initialization
+//    init(title: String, description: String) {
+//        self.title = title
+//        self.goalDescription = description
+//    }
 }
