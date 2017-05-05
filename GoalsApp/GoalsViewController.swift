@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class GoalsViewController: UITableViewController {
     
@@ -38,6 +39,7 @@ class GoalsViewController: UITableViewController {
         
         cell.titleLable.text = goal.title
         cell.descriptionLabel.text = goal.goalDescription
+        cell.goalLineChartView.data = updateChartWithData();
         
         // Configure the cell...
         
@@ -47,6 +49,22 @@ class GoalsViewController: UITableViewController {
     
     //MARK: Private Methods
     private func loadSampleGoals() {
-        goals += []
+        let goal1 = Goal()
+        goal1.title = "Test Goal"
+        goal1.goalDescription = "Test Goal Description"
+        goal1.save()
+
+        goals += [goal1]
+    }
+    
+    func updateChartWithData() -> LineChartData {
+        var dataEntries: [ChartDataEntry] = []
+        let dataEntry = ChartDataEntry(x: 2.0, y: 4.0)
+        let dataEntry2 = ChartDataEntry(x: 4.0, y: 6.0)
+        dataEntries.append(dataEntry)
+        dataEntries.append(dataEntry2)
+        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Goal count")
+        let chartData = LineChartData(dataSet: chartDataSet)
+        return chartData
     }
 }
