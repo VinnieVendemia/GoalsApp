@@ -40,31 +40,57 @@ class GoalsViewController: UITableViewController {
         cell.titleLable.text = goal.title
         cell.descriptionLabel.text = goal.goalDescription
         cell.goalLineChartView.data = updateChartWithData();
+        configureChartView(goalLineChartView: cell.goalLineChartView)
         
         // Configure the cell...
         
         return cell
     }
     
+    private func configureChartView(goalLineChartView: LineChartView){
+        goalLineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInCubic)
+        goalLineChartView.xAxis.drawAxisLineEnabled = false
+        goalLineChartView.chartDescription?.text = ""
+        goalLineChartView.isUserInteractionEnabled = false
+    }
+    
     
     //MARK: Private Methods
+    private func updateChartWithData() -> LineChartData {
+        let dataEntries: [ChartDataEntry] = addTestData()
+        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Goal Progress")
+        chartDataSet.colors = [UIColor.blue];
+        chartDataSet.drawCubicEnabled = true
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.drawValuesEnabled = false
+        let chartData = LineChartData(dataSet: chartDataSet)
+        return chartData
+    }
+    
+    //MARK: Remove after testing
+    private func addTestData() -> [ChartDataEntry] {
+        var dataEntries: [ChartDataEntry] = []
+        for index in 1...10 {
+            let y = Double(arc4random_uniform(10));
+            let dataEntry = ChartDataEntry(x: Double(index), y: y)
+            dataEntries.append(dataEntry)
+        }
+        
+        return dataEntries;
+    }
+    
     private func loadSampleGoals() {
         let goal1 = Goal()
         goal1.title = "Test Goal"
         goal1.goalDescription = "Test Goal Description"
         goal1.save()
-
-        goals += [goal1]
-    }
-    
-    func updateChartWithData() -> LineChartData {
-        var dataEntries: [ChartDataEntry] = []
-        let dataEntry = ChartDataEntry(x: 2.0, y: 4.0)
-        let dataEntry2 = ChartDataEntry(x: 4.0, y: 6.0)
-        dataEntries.append(dataEntry)
-        dataEntries.append(dataEntry2)
-        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Goal count")
-        let chartData = LineChartData(dataSet: chartDataSet)
-        return chartData
+        
+        let goal2 = Goal()
+        goal2.title = "Test Goal 2"
+        goal2.goalDescription = "Test Goal 2 Description"
+        goal2.save()
+        
+        goals += [goal1, goal2]
     }
 }
