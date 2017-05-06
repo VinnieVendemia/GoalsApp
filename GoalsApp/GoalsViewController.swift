@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import RealmSwift
 
 class GoalsViewController: UITableViewController {
     
@@ -80,17 +81,32 @@ class GoalsViewController: UITableViewController {
         return dataEntries;
     }
     
+    private func sampleProgress(progress: List<Progress>){
+        let p1 = Progress()
+        p1.progressDesciption = "P 1"
+        p1.date = Date.init()
+        
+        
+        let p2 = Progress()
+        p2.progressDesciption = "p 2"
+        p2.date = Date.init()
+
+        progress.append(p1)
+        progress.append(p2)
+    }
+    
     private func loadSampleGoals() {
         let goal1 = Goal()
         goal1.title = "Test Goal"
         goal1.goalDescription = "Test Goal Description"
+        sampleProgress(progress: goal1.progress)
         goal1.save()
         
-        let goal2 = Goal()
-        goal2.title = "Test Goal 2"
-        goal2.goalDescription = "Test Goal 2 Description"
-        goal2.save()
+//        let goal2 = Goal()
+//        goal2.title = "Test Goal 2"
+//        goal2.goalDescription = "Test Goal 2 Description"
+//        goal2.save()
         
-        goals += [goal1, goal2]
+        goals += [goal1]
     }
 }
