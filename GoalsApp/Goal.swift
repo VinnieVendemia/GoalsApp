@@ -16,6 +16,7 @@ class Goal: Object {
     
     dynamic var title: String = ""
     dynamic var goalDescription: String = ""
+    let progress = List<Progress>()
     
     func save() {
         do {
