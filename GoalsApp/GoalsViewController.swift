@@ -40,7 +40,7 @@ class GoalsViewController: UITableViewController {
         
         cell.titleLable.text = goal.title
         cell.descriptionLabel.text = goal.goalDescription
-        cell.goalLineChartView.data = updateChartWithData();
+        cell.goalLineChartView.data = updateChartWithData(goal: goal);
         configureChartView(goalLineChartView: cell.goalLineChartView)
         
         // Configure the cell...
@@ -57,8 +57,8 @@ class GoalsViewController: UITableViewController {
     
     
     //MARK: Private Methods
-    private func updateChartWithData() -> LineChartData {
-        let dataEntries: [ChartDataEntry] = addTestData()
+    private func updateChartWithData(goal: Goal) -> LineChartData {
+        let dataEntries: [ChartDataEntry] = addProgressEntries(goal: goal)
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Goal Progress")
         chartDataSet.colors = [UIColor.blue];
         chartDataSet.drawCubicEnabled = true
@@ -69,8 +69,7 @@ class GoalsViewController: UITableViewController {
         return chartData
     }
     
-    //MARK: Remove after testing
-    private func addTestData() -> [ChartDataEntry] {
+    private func addProgressEntries(goal: Goal) -> [ChartDataEntry] {
         var dataEntries: [ChartDataEntry] = []
         for index in 1...10 {
             let y = Double(arc4random_uniform(10));
@@ -82,17 +81,18 @@ class GoalsViewController: UITableViewController {
     }
     
     private func sampleProgress(progress: List<Progress>){
-        let p1 = Progress()
-        p1.progressDesciption = "P 1"
-        p1.date = Date.init()
         
+        for index in 1...10 {
+            let p1 = Progress()
+            p1.progressDesciption = "P: \(index)"
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            let testDate = "2017/04/0\(index) 22:31"
+            let someDateTime: Date = formatter.date(from: testDate)!
+            p1.date = someDateTime
+            progress.append(p1)
+        }
         
-        let p2 = Progress()
-        p2.progressDesciption = "p 2"
-        p2.date = Date.init()
-
-        progress.append(p1)
-        progress.append(p2)
     }
     
     private func loadSampleGoals() {
