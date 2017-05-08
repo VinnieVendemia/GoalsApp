@@ -77,10 +77,10 @@ class GoalsViewController: UITableViewController {
     private func addProgressEntries(goal: Goal) -> [ChartDataEntry] {
         var dataEntries: [ChartDataEntry] = []
         for index in 0...9 {
-            let y = Double(arc4random_uniform(10));
+            let y = goal.progress[index].scale
             let date = goal.progress[index]
             let timeIntervalForDate: TimeInterval = date.date.timeIntervalSinceNow
-            let dataEntry = ChartDataEntry(x: Double(timeIntervalForDate), y: y)
+            let dataEntry = ChartDataEntry(x: Double(timeIntervalForDate), y: Double(y))
             dataEntries.append(dataEntry)
         }
         
@@ -97,6 +97,7 @@ class GoalsViewController: UITableViewController {
             let testDate = "2017/04/0\(index) 08:00"
             let someDateTime: Date = formatter.date(from: testDate)!
             p1.date = someDateTime
+            p1.scale = index
             progress.append(p1)
         }
         
