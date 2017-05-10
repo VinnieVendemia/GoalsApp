@@ -226,14 +226,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="82s-W7-y7W" id="rg4-8L-jg9"/>
                         <outlet property="passwordTextField" destination="qGb-e8-vuC" id="mSD-RX-iAm"/>
-                        <segue destination="oA0-oQ-UY0" kind="presentation" identifier="GoToGoalsController" id="I0o-Z7-Dqc"/>
+                        <segue destination="MKt-rN-eoD" kind="presentation" identifier="GoToGoalsController" id="I0o-Z7-Dqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5f-3B-ca9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832.79999999999995" y="-331.48425787106447"/>
         </scene>
-        <!--Goals View Controller-->
+        <!--GOALS-->
         <scene sceneID="Hfv-fS-YBi">
             <objects>
                 <tableViewController id="oA0-oQ-UY0" customClass="GoalsViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -282,8 +282,60 @@
                             <outlet property="delegate" destination="oA0-oQ-UY0" id="47Z-Vp-3Pp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="GOALS" id="HQJ-Al-RkA">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="MTT-4U-NXL">
+                            <connections>
+                                <segue destination="Ry6-wG-Wac" kind="show" id="U2V-1I-jQc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngI-Ab-K3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="-331.48425787106447"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IJQ-HI-p5y">
+            <objects>
+                <viewController id="Ry6-wG-Wac" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8DL-ky-jcS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pf9-tB-e4E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CLI-eo-rgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-uK-9nY">
+                                <rect key="frame" x="145" y="99" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIB-bQ-YED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3556" y="-92.203898050974516"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ohx-tV-emz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MKt-rN-eoD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZHi-5l-X3m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oA0-oQ-UY0" kind="relationship" relationship="rootViewController" id="oFT-Mr-eul"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaZ-zi-Fw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8" y="-331.48425787106447"/>
         </scene>
