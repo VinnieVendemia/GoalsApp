@@ -93,8 +93,8 @@ class GoalsViewController: UITableViewController {
             let p1 = Progress()
             p1.progressDesciption = "P: \(index)"
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy/MM/dd HH:mm"
-            let testDate = "2017/04/0\(index) 08:00"
+            formatter.dateFormat = "yyyy/MM/dd"
+            let testDate = "2017/04/0\(index)"
             let someDateTime: Date = formatter.date(from: testDate)!
             p1.date = someDateTime
             p1.scale = index
