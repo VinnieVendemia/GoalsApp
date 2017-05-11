@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class AddGoalViewController: UIViewController {
+class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
     
@@ -24,6 +24,11 @@ class AddGoalViewController: UIViewController {
         let utils = Utilities();
         utils.addBottomBorder(textField: goalTitleField);
         utils.addBottomBorder(textField: goalDescriptionField);
+        
+        goalTitleField.delegate = self
+
+        // Enable the Save button only if the text field has a valid Meal name.
+        updateSaveButtonState()
     }
     
     //Mark: Navigation
@@ -38,6 +43,23 @@ class AddGoalViewController: UIViewController {
         goal = Goal()
         goal?.title = title
         goal?.goalDescription = description
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Disable the Save button while editing.
+        saveButton.isEnabled = false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
+    }
+    
+    //MARK: Private Methods
+    private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
+        let text = goalTitleField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
     }
     
 }
