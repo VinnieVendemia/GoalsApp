@@ -357,7 +357,11 @@
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Goal" id="83a-3H-NZq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="13Q-KN-qoZ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="13Q-KN-qoZ">
+                            <connections>
+                                <action selector="cancel:" destination="Ry6-wG-Wac" id="EnO-92-8lG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="goalDescriptionField" destination="wrF-u4-A6j" id="FS9-na-V5p"/>
