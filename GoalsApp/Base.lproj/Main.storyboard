@@ -285,7 +285,7 @@
                     <navigationItem key="navigationItem" title="GOALS" id="HQJ-Al-RkA">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="MTT-4U-NXL">
                             <connections>
-                                <segue destination="Ry6-wG-Wac" kind="show" id="U2V-1I-jQc"/>
+                                <segue destination="fPR-Ax-O9K" kind="presentation" identifier="AddGoal" id="U2V-1I-jQc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="2716" y="-331.48425787106447"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Goal-->
         <scene sceneID="IJQ-HI-p5y">
             <objects>
-                <viewController id="Ry6-wG-Wac" sceneMemberID="viewController">
+                <viewController id="Ry6-wG-Wac" customClass="AddGoalViewController" customModule="GoalsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8DL-ky-jcS"/>
                         <viewControllerLayoutGuide type="bottom" id="Pf9-tB-e4E"/>
@@ -306,20 +306,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-uK-9nY">
-                                <rect key="frame" x="145" y="99" width="85" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a new goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zct-gM-qpX">
+                                <rect key="frame" x="16" y="130" width="251" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueL-Cy-aOf">
+                                <rect key="frame" x="16" y="210" width="124" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-4H-82f">
+                                <rect key="frame" x="16" y="319" width="124" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmY-D7-HAb">
+                                <rect key="frame" x="16" y="272" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wrF-u4-A6j">
+                                <rect key="frame" x="16" y="380" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-tw-fCu">
+                                <rect key="frame" x="223" y="449" width="136" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98678820680000001" green="1" blue="0.97749310229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToGoalsController:" destination="zd3-Q3-zbz" eventType="touchUpInside" id="Cw9-Ll-mJ9"/>
+                                    <segue destination="Gbg-WV-r11" kind="unwind" unwindAction="unwindToGoalListWithSender:" id="H0s-kh-bA8"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Goal" id="83a-3H-NZq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="13Q-KN-qoZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="goalDescriptionField" destination="wrF-u4-A6j" id="FS9-na-V5p"/>
+                        <outlet property="goalTitleField" destination="mmY-D7-HAb" id="tG6-S0-qyc"/>
+                        <outlet property="saveButton" destination="uXg-tw-fCu" id="VqU-o7-PrX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIB-bQ-YED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gbg-WV-r11" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3556" y="-92.203898050974516"/>
+            <point key="canvasLocation" x="4495.1999999999998" y="-92.203898050974516"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ohx-tV-emz">
@@ -338,6 +387,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaZ-zi-Fw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8" y="-331.48425787106447"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="soq-kY-9Kd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fPR-Ax-O9K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HtU-M7-RI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ry6-wG-Wac" kind="relationship" relationship="rootViewController" id="RGE-DM-OQY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h44-0O-7BQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3556" y="-92.203898050974516"/>
         </scene>
     </scenes>
 </document>
