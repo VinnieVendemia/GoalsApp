@@ -12,7 +12,7 @@ import RealmSwift
 class Progress: Object {
     
     dynamic var progressDesciption: String = ""
-    dynamic var date: Date = Date.init()
+    dynamic var date: String = ""
     dynamic var scale: Int = 1
     
     func save() {
