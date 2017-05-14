@@ -100,37 +100,33 @@ class GoalsViewController: UITableViewController {
         return dataEntries;
     }
     
-    private func generateProgressMap(goal: Goal) -> [String: Int] {
     
+    // Combine the scale of progress items that occured on the same date 
+    // Generate and return a dictionary of date => scale for a given goal
+    private func generateProgressMap(goal: Goal) -> [String: Int] {
         var progressDictionary = [String: Int]()
-        
-        for index in 1...30 {
-            var testDate = "2017-04-0\(index) 08:00"
-            if index > 9 {
-                testDate = "2017-04-\(index) 08:00"
-            }
-            
-            let key = utils.captureDate(dateString: testDate)
+        for progress in goal.progress {
+            let key = utils.captureDate(dateString: progress.date)
             if progressDictionary[key] == nil {
-                progressDictionary[key] = Int(arc4random_uniform(10)) + 1
+                progressDictionary[key] = progress.scale
             } else {
-//                progressDictionary[key] = progressDictionary[key] + 2
+                progressDictionary[key] = progressDictionary[key]! + progress.scale
             }
         }
-        
         return progressDictionary
     }
     
     private func sampleProgress(progress: List<Progress>){
         
-        for index in 1...10 {
+        for index in 1...30 {
             let p1 = Progress()
             p1.progressDesciption = "P: \(index)"
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd"
-            let testDate = "2017-04-0\(index)"
-            let someDateTime: Date = formatter.date(from: testDate)!
-            p1.date = someDateTime
+            var testDate = "2017-04-0\(index) 08:00"
+            if index > 9 {
+                testDate = "2017-04-\(index) 08:00"
+            }
+            p1.date = testDate
+            // p1.scale = Int(arc4random_uniform(10)) + 1
             p1.scale = index
             progress.append(p1)
         }
