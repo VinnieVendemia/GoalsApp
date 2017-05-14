@@ -19,5 +19,30 @@ class Utilities {
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
     }
+    
+    
+    // I adopted this code from 
+    // http://stackoverflow.com/questions/27880650/swift-extract-regex-matches
+    // Feel free to look there if there are any questions
+    func matches(for regex: String, in text: String) -> [String] {
+        
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let nsString = text as NSString
+            let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
+    // Uses the above match function to capture a
+    // date String in the format of "yyyy-MM-dd"
+    func captureDate(dateString: String) -> String {
+        let regex  = "\\d\\d\\d\\d-\\d\\d-\\d\\d"
+        let ms = matches(for: regex, in: dateString)
+        return ms[0]
+    }
 }
 
