@@ -14,6 +14,7 @@ class GoalsViewController: UITableViewController {
     
     //MARK: Properties
     var goals = [Goal]()
+    let utils = Utilities();
     weak var axisFormatDelegate: IAxisValueFormatter?
     
     override func viewDidLoad() {
@@ -61,6 +62,7 @@ class GoalsViewController: UITableViewController {
     private func configureChartView(goalLineChartView: LineChartView){
         goalLineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInCubic)
         goalLineChartView.xAxis.drawAxisLineEnabled = false
+        goalLineChartView.xAxis.drawGridLinesEnabled = false
         goalLineChartView.chartDescription?.text = ""
         goalLineChartView.isUserInteractionEnabled = false
     }
@@ -81,15 +83,42 @@ class GoalsViewController: UITableViewController {
     
     private func addProgressEntries(goal: Goal) -> [ChartDataEntry] {
         var dataEntries: [ChartDataEntry] = []
-        for index in 0...9 {
-            let y = goal.progress[index].scale
-            let date = goal.progress[index]
-            let timeIntervalForDate: TimeInterval = date.date.timeIntervalSinceNow
-            let dataEntry = ChartDataEntry(x: Double(timeIntervalForDate), y: Double(y))
+        let progressMap = generateProgressMap(goal: goal)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let sortedKeys = Array(progressMap.keys).sorted(by: <)
+        
+        for key in sortedKeys {
+            let y = Double(progressMap[key]!)
+            let date: Date = formatter.date(from: key)!
+            let timeIntervalForDate: TimeInterval = date.timeIntervalSinceNow
+            let dataEntry = ChartDataEntry(x: Double(timeIntervalForDate), y: y)
             dataEntries.append(dataEntry)
         }
         
         return dataEntries;
+    }
+    
+    private func generateProgressMap(goal: Goal) -> [String: Int] {
+    
+        var progressDictionary = [String: Int]()
+        
+        for index in 1...30 {
+            var testDate = "2017-04-0\(index) 08:00"
+            if index > 9 {
+                testDate = "2017-04-\(index) 08:00"
+            }
+            
+            let key = utils.captureDate(dateString: testDate)
+            if progressDictionary[key] == nil {
+                progressDictionary[key] = Int(arc4random_uniform(10)) + 1
+            } else {
+//                progressDictionary[key] = progressDictionary[key] + 2
+            }
+        }
+        
+        return progressDictionary
     }
     
     private func sampleProgress(progress: List<Progress>){
@@ -98,8 +127,8 @@ class GoalsViewController: UITableViewController {
             let p1 = Progress()
             p1.progressDesciption = "P: \(index)"
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy/MM/dd"
-            let testDate = "2017/04/0\(index)"
+            formatter.dateFormat = "yyyy-MM-dd"
+            let testDate = "2017-04-0\(index)"
             let someDateTime: Date = formatter.date(from: testDate)!
             p1.date = someDateTime
             p1.scale = index
