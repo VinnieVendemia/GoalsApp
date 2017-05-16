@@ -16,6 +16,7 @@
 		2EA54C0C1EA578C500C0E323 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */; };
 		2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */; };
 		2EA554D71EC3D77800315BCB /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */; };
+		2EBF152D1ECA787F0066BF85 /* AddProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */; };
 		6BAA7481F55D033E01C57C2D /* Pods_GoalsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2DD4799E70BABD30BBA279 /* Pods_GoalsAppTests.framework */; };
 		89EFA358C4A22483722A16B0 /* Pods_GoalsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF27E0B6B35570242812042 /* Pods_GoalsApp.framework */; };
 		B0E7B18B1E8C98D200E366E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B18A1E8C98D200E366E0 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
+		2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgressViewController.swift; sourceTree = "<group>"; };
 		AC2DD4799E70BABD30BBA279 /* Pods_GoalsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoalsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E7B1851E8C98D200E366E0 /* GoalsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E7B1891E8C98D200E366E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2E3057361EAFB85100978F36 /* Utilities.swift */,
 				2E2C47571EBE292E001BA388 /* Progress.swift */,
 				2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */,
+				2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */,
 			);
 			path = GoalsApp;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2C47581EBE292E001BA388 /* Progress.swift in Sources */,
+				2EBF152D1ECA787F0066BF85 /* AddProgressViewController.swift in Sources */,
 				2E59D14C1EAAA038007F5F91 /* GoalsViewController.swift in Sources */,
 				2EA54C0C1EA578C500C0E323 /* LoginViewController.swift in Sources */,
 				B0E7B18D1E8C98D200E366E0 /* ViewController.swift in Sources */,
@@ -503,6 +507,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 				);
 				INFOPLIST_FILE = GoalsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -519,6 +524,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 				);
 				INFOPLIST_FILE = GoalsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
