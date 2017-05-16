@@ -7,16 +7,19 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
+  - SearchTextField (1.0.10)
 
 DEPENDENCIES:
   - Charts (~> 3.0.1)
   - RealmSwift (~> 2.7.0)
+  - SearchTextField (~> 1.0.2)
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  SearchTextField: e271b2719880f907045e30ed3bef02fc4418c877
 
-PODFILE CHECKSUM: d6b08fc4514ff56d2d58c637ee620efee33815f0
+PODFILE CHECKSUM: ae0ed6746e3ddf904ca2f8a2367f2014944d1919
 
 COCOAPODS: 1.2.1

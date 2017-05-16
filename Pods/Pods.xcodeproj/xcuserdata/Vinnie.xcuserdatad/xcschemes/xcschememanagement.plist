@@ -29,20 +29,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SearchTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3BD224FE7248F7490D28B356891C70F0</key>
+		<key>75D7D85FF45065F0ADB5322EA2FCCB54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61CA3CF567C3EA3542E8FD5FA5CA7AE3</key>
+		<key>A2544D31C5AA076314330AB06BB916FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4C6EA0B4E5C4A7E2851BEB2C52E0CE2</key>
+		<key>C2B9850679585A54147CC3ACD77AF8CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1A40B6389DC8E144B7BB33B48BF7BED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
