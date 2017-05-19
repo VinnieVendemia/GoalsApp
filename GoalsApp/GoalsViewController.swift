@@ -9,20 +9,31 @@
 import UIKit
 import Charts
 import RealmSwift
+import Siesta
 
-class GoalsViewController: UITableViewController {
-    
+class GoalsViewController: UITableViewController, ResourceObserver {
+
     //MARK: Properties
     var goals = [Goal]()
     let utils = Utilities();
     weak var axisFormatDelegate: IAxisValueFormatter?
+    let MyAPI = Service(baseURL: "MY-API.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         axisFormatDelegate = self
         
+        MyAPI.resource("/example-endpoint").addObserver(self)
         loadSampleGoals()
+    }
+    
+    /**
+     Called when anything happens that might change the value of the reosurce’s `latestData`, `latestError`, or
+     `isLoading` flag. The `event` explains the reason for the notification.
+     */
+    func resourceChanged(_ resource: Resource, event: ResourceEvent) {
+        // TODO
     }
     
     
