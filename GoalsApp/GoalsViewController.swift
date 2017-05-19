@@ -17,7 +17,7 @@ class GoalsViewController: UITableViewController, ResourceObserver {
     var goals = [Goal]()
     let utils = Utilities();
     weak var axisFormatDelegate: IAxisValueFormatter?
-    let MyAPI = Service(baseURL: "MY-API.com")
+    let MyAPI = Service(baseURL: Constants.api_url)
     
     override func viewDidLoad() {
         super.viewDidLoad()
