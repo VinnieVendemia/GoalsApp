@@ -9,6 +9,7 @@ target 'GoalsApp' do
   pod 'Charts', '~> 3.0.1'
   pod 'RealmSwift', '~> 2.7.0'
   pod 'SearchTextField', '~> 1.0.2'
+  pod 'Siesta', '~> 1.0'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

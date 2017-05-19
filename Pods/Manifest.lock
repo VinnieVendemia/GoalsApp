@@ -8,18 +8,23 @@ PODS:
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
   - SearchTextField (1.0.10)
+  - Siesta (1.1.1):
+    - Siesta/Core (= 1.1.1)
+  - Siesta/Core (1.1.1)
 
 DEPENDENCIES:
   - Charts (~> 3.0.1)
   - RealmSwift (~> 2.7.0)
   - SearchTextField (~> 1.0.2)
+  - Siesta (~> 1.0)
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SearchTextField: e271b2719880f907045e30ed3bef02fc4418c877
+  Siesta: 920372f09b7cfd798074d85d8f3cf8505529a56e
 
-PODFILE CHECKSUM: ae0ed6746e3ddf904ca2f8a2367f2014944d1919
+PODFILE CHECKSUM: 91685157d3ffc8286ae6e55aa4717314427195c3
 
 COCOAPODS: 1.2.1

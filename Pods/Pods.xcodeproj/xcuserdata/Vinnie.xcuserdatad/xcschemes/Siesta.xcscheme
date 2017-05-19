@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FEF2C86D54BE9CC1C652673AB281C473'
-               BlueprintName = 'Realm'
+               BlueprintIdentifier = '0937B9D065AE66286BE6F81199E77AFC'
+               BlueprintName = 'Siesta'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Realm.framework'>
+               BuildableName = 'Siesta.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
