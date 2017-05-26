@@ -8,6 +8,6 @@
 
 class Constants {
     
-    static let api_url: String = "https://url-to-my-api.com"
+    static let api_url: String = "https://goals-app-api.herokuapp.com"
     
 }
