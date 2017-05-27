@@ -10,6 +10,7 @@ target 'GoalsApp' do
   pod 'RealmSwift', '~> 2.7.0'
   pod 'SearchTextField', '~> 1.0.2'
   pod 'Siesta', '~> 1.0'
+  pod 'SwiftyJSON'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

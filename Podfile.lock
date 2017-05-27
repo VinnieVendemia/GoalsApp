@@ -11,12 +11,14 @@ PODS:
   - Siesta (1.1.1):
     - Siesta/Core (= 1.1.1)
   - Siesta/Core (1.1.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Charts (~> 3.0.1)
   - RealmSwift (~> 2.7.0)
   - SearchTextField (~> 1.0.2)
   - Siesta (~> 1.0)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
@@ -24,7 +26,8 @@ SPEC CHECKSUMS:
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SearchTextField: e271b2719880f907045e30ed3bef02fc4418c877
   Siesta: 920372f09b7cfd798074d85d8f3cf8505529a56e
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 91685157d3ffc8286ae6e55aa4717314427195c3
+PODFILE CHECKSUM: 82ceb43f6397b16bd5f2582cf2b42f69dbd795e4
 
 COCOAPODS: 1.2.1
