@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0D75CF1ED8F414005C8A31 /* GoalApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D75CE1ED8F414005C8A31 /* GoalApiService.swift */; };
 		2E0ED06E1EB6E57A004683F2 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0ED06D1EB6E57A004683F2 /* Charts.framework */; };
 		2E2C47581EBE292E001BA388 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C47571EBE292E001BA388 /* Progress.swift */; };
 		2E3057351EAC24B600978F36 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3057341EAC24B600978F36 /* Goal.swift */; };
@@ -18,6 +19,7 @@
 		2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */; };
 		2EA554D71EC3D77800315BCB /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */; };
 		2EBF152D1ECA787F0066BF85 /* AddProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */; };
+		2EDB294B1ED9D0D600AFF4EA /* ApiWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB294A1ED9D0D600AFF4EA /* ApiWrapper.swift */; };
 		6BAA7481F55D033E01C57C2D /* Pods_GoalsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2DD4799E70BABD30BBA279 /* Pods_GoalsAppTests.framework */; };
 		89EFA358C4A22483722A16B0 /* Pods_GoalsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF27E0B6B35570242812042 /* Pods_GoalsApp.framework */; };
 		B0E7B18B1E8C98D200E366E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E7B18A1E8C98D200E366E0 /* AppDelegate.swift */; };
@@ -40,6 +42,7 @@
 /* Begin PBXFileReference section */
 		174D55FDEF15356AD3B8ED00 /* Pods-GoalsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1DF27E0B6B35570242812042 /* Pods_GoalsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoalsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0D75CE1ED8F414005C8A31 /* GoalApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalApiService.swift; sourceTree = "<group>"; };
 		2E0ED06D1EB6E57A004683F2 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		2E2C47571EBE292E001BA388 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		2E3057341EAC24B600978F36 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgressViewController.swift; sourceTree = "<group>"; };
+		2EDB294A1ED9D0D600AFF4EA /* ApiWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiWrapper.swift; sourceTree = "<group>"; };
 		AC2DD4799E70BABD30BBA279 /* Pods_GoalsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoalsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E7B1851E8C98D200E366E0 /* GoalsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E7B1891E8C98D200E366E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */,
 				2EBF152C1ECA787F0066BF85 /* AddProgressViewController.swift */,
 				2E6F174C1ECE7AC800A6E1CB /* Constants.swift */,
+				2E0D75CE1ED8F414005C8A31 /* GoalApiService.swift */,
+				2EDB294A1ED9D0D600AFF4EA /* ApiWrapper.swift */,
 			);
 			path = GoalsApp;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0D75CF1ED8F414005C8A31 /* GoalApiService.swift in Sources */,
 				2E2C47581EBE292E001BA388 /* Progress.swift in Sources */,
 				2EBF152D1ECA787F0066BF85 /* AddProgressViewController.swift in Sources */,
 				2E59D14C1EAAA038007F5F91 /* GoalsViewController.swift in Sources */,
@@ -383,6 +390,7 @@
 				2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */,
 				2E59D14E1EABF1C3007F5F91 /* GoalTableViewCell.swift in Sources */,
 				B0E7B18B1E8C98D200E366E0 /* AppDelegate.swift in Sources */,
+				2EDB294B1ED9D0D600AFF4EA /* ApiWrapper.swift in Sources */,
 				2EA554D71EC3D77800315BCB /* AddGoalViewController.swift in Sources */,
 				2E3057371EAFB85100978F36 /* Utilities.swift in Sources */,
 				2E3057351EAC24B600978F36 /* Goal.swift in Sources */,
