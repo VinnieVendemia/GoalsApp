@@ -8,6 +8,8 @@
 
 import UIKit
 import os.log
+import Siesta
+import SwiftyJSON
 
 class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
@@ -38,7 +40,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+        guard let button = sender as? UIButton, button === saveButton else {
             return
         }
         
@@ -47,6 +49,8 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         goal = Goal()
         goal?.title = title
         goal?.goalDescription = description
+        
+        apiWrapper.postGoal(title: title, description: description)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
