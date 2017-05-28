@@ -73,6 +73,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // TODO: I couldn't figure out how to retrieve the actual message returned from the service 
+    // figure out how to do this...
     func failureAlert() {
         let alert = UIAlertController(title: "Error", message: "Failed to create user", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
