@@ -22,6 +22,16 @@ class ApiWrapper {
             .onSuccess { _ in print("Wow! Data!") }
             .onFailure { error in print("Oh, bummer.") }
     }
+    
+    func postUser(username: String, password: String, errorAlert: ()  ) {
+        var jsonData = [String: String]()
+        jsonData["username"] = username
+        jsonData["password"] = password
+        jsonData["admin"] = "" // Not important for now
+        goalApiService.users.request(.post, json: jsonData)
+            .onSuccess { _ in print("Great Success!") }
+            .onFailure { error in errorAlert }
+    }
 }
 
 let apiWrapper = ApiWrapper()
