@@ -146,7 +146,6 @@
                                 <connections>
                                     <action selector="goToGoalsController:" destination="A74-nR-Lfk" eventType="touchUpInside" id="Jff-KP-QrC"/>
                                     <action selector="goToGoalsController:" destination="zd3-Q3-zbz" eventType="touchUpInside" id="m91-TL-YrT"/>
-                                    <segue destination="MKt-rN-eoD" kind="presentation" identifier="GoToGoalsController" id="oez-ff-xEV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -159,6 +158,7 @@
                         <outlet property="passwordValidationText" destination="PdV-fK-YZa" id="VC6-pe-YAx"/>
                         <outlet property="passwordVerifyTextField" destination="mH3-SN-wVE" id="4IO-QS-Crr"/>
                         <outlet property="saveButton" destination="Say-jp-yPj" id="aUo-R5-Rxt"/>
+                        <segue destination="MKt-rN-eoD" kind="presentation" identifier="GoToGoalsController" id="azM-bf-0bf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v42-iu-RJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -472,6 +472,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oez-ff-xEV"/>
+        <segue reference="azM-bf-0bf"/>
     </inferredMetricsTieBreakers>
 </document>
