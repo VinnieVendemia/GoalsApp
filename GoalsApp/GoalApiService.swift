@@ -21,4 +21,5 @@ class GoalAPIService: Service {
     
     var goals: Resource { return resource("/goals") }
     var users: Resource { return resource("/users") }
+    var auth: Resource { return resource("/authenticate") }
 }
