@@ -73,6 +73,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // Performs logic based on response of the postUser API request 
+    // If successful, the message will contain the token of the 
+    // account just created.
+    //
+    // On failure, present an alert w/ the corresponding message
     func handleResponse(passed: Bool, message: String) -> Void {
         if(passed) {
             self.performSegue(withIdentifier: "GoToGoalsController", sender:self)
