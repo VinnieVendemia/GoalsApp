@@ -15,6 +15,7 @@
 		2E59D14C1EAAA038007F5F91 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59D14B1EAAA038007F5F91 /* GoalsViewController.swift */; };
 		2E59D14E1EABF1C3007F5F91 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59D14D1EABF1C3007F5F91 /* GoalTableViewCell.swift */; };
 		2E6F174D1ECE7AC800A6E1CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6F174C1ECE7AC800A6E1CB /* Constants.swift */; };
+		2E9F5F5C1EDC8A9F00212A32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F5F5B1EDC8A9F00212A32 /* User.swift */; };
 		2EA54C0C1EA578C500C0E323 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */; };
 		2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */; };
 		2EA554D71EC3D77800315BCB /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */; };
@@ -50,6 +51,7 @@
 		2E59D14B1EAAA038007F5F91 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		2E59D14D1EABF1C3007F5F91 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		2E6F174C1ECE7AC800A6E1CB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2E9F5F5B1EDC8A9F00212A32 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2EA54C0B1EA578C500C0E323 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2EA54C0D1EA57DAF00C0E323 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2EA554D61EC3D77800315BCB /* AddGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				2E6F174C1ECE7AC800A6E1CB /* Constants.swift */,
 				2E0D75CE1ED8F414005C8A31 /* GoalApiService.swift */,
 				2EDB294A1ED9D0D600AFF4EA /* ApiWrapper.swift */,
+				2E9F5F5B1EDC8A9F00212A32 /* User.swift */,
 			);
 			path = GoalsApp;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				B0E7B18D1E8C98D200E366E0 /* ViewController.swift in Sources */,
 				2EA54C0E1EA57DAF00C0E323 /* SignUpViewController.swift in Sources */,
 				2E59D14E1EABF1C3007F5F91 /* GoalTableViewCell.swift in Sources */,
+				2E9F5F5C1EDC8A9F00212A32 /* User.swift in Sources */,
 				B0E7B18B1E8C98D200E366E0 /* AppDelegate.swift in Sources */,
 				2EDB294B1ED9D0D600AFF4EA /* ApiWrapper.swift in Sources */,
 				2EA554D71EC3D77800315BCB /* AddGoalViewController.swift in Sources */,
