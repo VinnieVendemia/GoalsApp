@@ -23,14 +23,14 @@ class ApiWrapper {
             .onFailure { error in print("Oh, bummer.") }
     }
     
-    func postUser(username: String, password: String, errorAlert: ()  ) {
+    func postUser(username: String, password: String, handleResponse: @escaping (Bool, String) -> (Void)  ) {
         var jsonData = [String: String]()
         jsonData["username"] = username
         jsonData["password"] = password
         jsonData["admin"] = "" // Not important for now
         goalApiService.users.request(.post, json: jsonData)
-            .onSuccess { _ in print("Great Success!") }
-            .onFailure { error in errorAlert }
+            .onSuccess { _ in handleResponse(true, "") }
+            .onFailure { error in handleResponse(false, error.userMessage) }
     }
 }
 
