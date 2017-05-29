@@ -64,20 +64,33 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let username = emailTextField.text
             let password = passwordTextField.text
             
-            apiWrapper.postUser(username: username!, password: password!, errorAlert: failureAlert() )
-            // If positive response, call AUTH user, save token locally
-                // then proceed to goalsController
-            // if negative response, alert user that the save failed
-        
-            // self.performSegue(withIdentifier: "GoToGoalsController", sender:self)
+            // Clear fields
+            passwordTextField.text = ""
+            passwordVerifyTextField.text = ""
+            passwordsMatch = false
+            
+            apiWrapper.postUser(username: username!, password: password!, handleResponse: handleResponse )
         }
     }
     
-    // TODO: I couldn't figure out how to retrieve the actual message returned from the service 
-    // figure out how to do this...
-    func failureAlert() {
-        let alert = UIAlertController(title: "Error", message: "Failed to create user", preferredStyle: UIAlertControllerStyle.alert)
+    func handleResponse(passed: Bool, message: String) -> Void {
+        if(passed) {
+            self.performSegue(withIdentifier: "GoToGoalsController", sender:self)
+        } else {
+            failureAlert(message: message)
+        }
+    }
+    
+    func failureAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: "Failed to create user: \(message)", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func successfulUserCreation() {
+        print("Great Success")
+        // If positive response, call AUTH user, save token locally
+        // then proceed to
+        
     }
 }
