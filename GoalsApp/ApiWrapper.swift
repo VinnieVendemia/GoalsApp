@@ -23,15 +23,27 @@ class ApiWrapper {
             .onFailure { error in print("Oh, bummer.") }
     }
     
+    // TODO: Once the service is updated, ensure that the token can be parsed from the success 
+    // message, and returned via the 'handleResponse' closure
     func postUser(username: String, password: String, handleResponse: @escaping (Bool, String) -> (Void)  ) {
         var jsonData = [String: String]()
         jsonData["username"] = username
         jsonData["password"] = password
         jsonData["admin"] = "" // Not important for now
         goalApiService.users.request(.post, json: jsonData)
-            .onSuccess { _ in handleResponse(true, "") }
+            .onSuccess { success in handleResponse(true, success.jsonDict["token"] as! String) }
             .onFailure { error in handleResponse(false, error.userMessage) }
     }
+    
+    func authUser(username: String, password: String) {
+        var jsonData = [String: String]()
+        jsonData["username"] = username
+        jsonData["password"] = password
+        goalApiService.auth.request(.post, json: jsonData)
+            .onSuccess { _ in print("AUTH") }
+            .onFailure { error in print("FAIL") }
+    }
+
 }
 
 let apiWrapper = ApiWrapper()
